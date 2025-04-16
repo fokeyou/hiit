@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>HIIT训练计时器</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- 引入外部样式 -->
+    <script type="module" src="https://unpkg.com/@capacitor/core@5.0.0/dist/index.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer" id="timer">00:00</div>
+        <div class="status" id="status">准备开始</div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="controls">
+            <button id="startBtn">开始</button>
+            <button id="resetBtn">重置</button>
+        </div>
+        <div class="settings">
+            <div class="settings-group">
+                <div class="settings-title">划船机HIIT设置</div>
+                <div class="input-group">
+                    <label for="sprintTime">冲刺时间 (秒):</label>
+                    <input type="number" id="sprintTime" value="40" aria-label="冲刺时间">
+                </div>
+                <div class="input-group">
+                    <label for="restTime">慢划时间 (秒):</label>
+                    <input type="number" id="restTime" value="80" aria-label="慢划时间">
+                </div>
+                <div class="input-group">
+                    <label for="rounds">组数:</label>
+                    <input type="number" id="rounds" value="15" aria-label="组数">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script> <!-- 引入外部脚本 -->
+</body>
+
+</html>
